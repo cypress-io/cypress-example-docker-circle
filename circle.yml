@@ -13,7 +13,7 @@ jobs:
           name: Running E2E tests
           command: cypress run --reporter junit
       - store_test_results:
-          path: test-results.xml
+          path: .
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
