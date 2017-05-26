@@ -13,6 +13,6 @@ jobs:
           name: Running E2E tests
           command: cypress run
       - store_artifacts:
-        path: cypress/videos
+          path: cypress/videos
       - store_artifacts:
-        path: cypress/screenshots
+          path: cypress/screenshots
