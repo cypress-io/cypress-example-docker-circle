@@ -1,2 +1,3 @@
 cypress/videos/
 test-results.xml
+results/
