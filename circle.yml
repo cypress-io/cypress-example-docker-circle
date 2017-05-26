@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Running E2E tests
-          command: cypress run
+          command: cypress run --reporter junit
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
