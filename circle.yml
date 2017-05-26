@@ -1,0 +1,14 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      # the Docker image with Cypress preinstalled
+      - image: cypress/internal:cy-0.19.2
+    working_directory: ~/app
+    parallelism: 1
+    steps:
+      - checkout
+      - run:
+          name: Running E2E tests
+          command: cypress run
