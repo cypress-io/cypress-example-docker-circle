@@ -1,3 +1,4 @@
 cypress/videos/
 test-results.xml
 results/
+.DS_Store
