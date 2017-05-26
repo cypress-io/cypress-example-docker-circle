@@ -17,6 +17,22 @@ See test runs for this example at
 
 ![CircleCI test run](images/circle.png)
 
+## Artifacts
+
+You can save generated videos and screenshots as CircleCI artifacts
+
+```yaml
+steps:
+  - checkout
+  - run:
+      name: Running E2E tests
+      command: cypress run
+  - store_artifacts:
+      path: cypress/videos
+  - store_artifacts:
+      path: cypress/screenshots
+```
+
 ## Happy testing
 
 If you find problems with Cypress and CI, please
