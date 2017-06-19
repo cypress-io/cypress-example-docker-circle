@@ -17,6 +17,13 @@ See test runs for this example at
 
 ![CircleCI test run](images/circle.png)
 
+**Note:** if you want to use CircleCI [Workflows feature][workflows] to run
+multiple tests in parallel, check out our example repo
+[cypress-example-docker-circle-workflows][workflows-repo].
+
+[workflows]: https://circleci.com/docs/2.0/workflows/
+[workflows-repo]: https://github.com/cypress-io/cypress-example-docker-circle-workflows
+
 ## Artifacts
 
 You can save generated videos and screenshots as CircleCI artifacts
