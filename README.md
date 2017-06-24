@@ -1,8 +1,6 @@
-# cypress-example-docker-circle
+# cypress-example-docker-circle [![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-docker-circle.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-docker-circle)
 
 > Cypress + Docker + CircleCI = ❤️
-
-[![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-docker-circle.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-docker-circle)
 
 Running your Cypress E2E tests on Circle CI v2.0 is very simple.
 See [circle.yml](circle.yml) for the current build commands.
@@ -15,7 +13,7 @@ Then check out the code and call `cypress run` command. That is it!
 See test runs for this example at
 [circleci.com](https://circleci.com/gh/cypress-io/cypress-example-docker-circle)
 
-![CircleCI test run](images/circle.png)
+<img src="screenshots/circle.png" height="500" />
 
 **Note:** if you want to use CircleCI [Workflows feature][workflows] to run
 multiple tests in parallel, check out our example repo
@@ -74,16 +72,16 @@ See the failed CI test run at
 
 The CircleCI test summary shows failed test and user-friendly message.
 
-![Failed test message](images/failed-test-summary.png)
+![Failed test message](screenshots/failed-test-summary.png)
 
 Switching to the artifacts tab, we can find the screenshot PNG image taken
 at the failure moment.
 
-![Failed test artifact](images/failed-test-screenshot-artifact.png)
+![Failed test artifact](screenshots/failed-test-screenshot-artifact.png)
 
 Finally, we can open either the video, or the screenshot artifact
 
-![Failed to find "testing" H2 element](images/failed-screenshot.png)
+![Failed to find "testing" H2 element](screenshots/failed-screenshot.png)
 
 The failure is now easy to see and fix.
 
