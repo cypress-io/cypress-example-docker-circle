@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # the Docker image with Cypress preinstalled
-      - image: cypress/internal:cy-0.19.2
+      - image: cypress/internal:cy-0.19.4
         environment:
           ## this enables colors in the output
           TERM: xterm
@@ -12,11 +12,17 @@ jobs:
     parallelism: 1
     steps:
       - checkout
+      - run: npm install
       - run:
-          name: Running E2E tests
-          command: cypress run --reporter junit --reporter-options "mochaFile=results/my-test-output.xml"
+          name: Running E2E tests with JUnit reporter
+          command: npm run test-junit
       - store_test_results:
-          path: results
+          path: junit-results
+      - run:
+          name: Running E2E tests with multiple reporters
+          command: npm run test-multiple
+      - store_test_results:
+          path: multiple-results
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:

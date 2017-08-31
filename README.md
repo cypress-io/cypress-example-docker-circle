@@ -40,6 +40,8 @@ steps:
 
 ## Test summary
 
+### Generate just XML report
+
 CircleCI can [store test results](https://circleci.com/docs/2.0/configuration-reference/#store_test_results)
 from a large number of [test reporters](https://circleci.com/docs/1.0/test-metadata/#metadata-collection-in-custom-test-steps).
 Cypress can [output test results](https://on.cypress.io/reporters)
@@ -84,6 +86,34 @@ Finally, we can open either the video, or the screenshot artifact
 ![Failed to find "testing" H2 element](screenshots/failed-screenshot.png)
 
 The failure is now easy to see and fix.
+
+In this repository take a look at `test-junit` script inside [package.json](package.json)
+
+### Spec + XML reports
+
+You can generate XML `junit` report and see spec output while CI is running
+using [mocha-multi-reporters](https://github.com/stanleyhlng/mocha-multi-reporters).
+
+```text
+npm install --save-dev mocha mocha-multi-reporters mocha-junit-reporter
+cypress run --reporter mocha-multi-reporters --reporter-options configFile=config.json
+```
+
+File [config.json](config.json) has
+
+```json
+{
+  "reporterEnabled": "spec, mocha-junit-reporter",
+  "mochaJunitReporterReporterOptions": {
+    "mochaFile": "multiple-results/results.xml"
+  }
+}
+```
+
+The standard output will have spec names during the test run, and the final result will be
+saved in JUnit XML format in file `multiple-results/results.xml`.
+
+Take a look at `test-multiple` script inside [package.json](package.json) for example.
 
 ## Happy testing
 
