@@ -95,12 +95,9 @@ You can generate XML `junit` report and see spec output while CI is running
 using [mocha-multi-reporters](https://github.com/stanleyhlng/mocha-multi-reporters).
 
 ```text
+npm install --save-dev mocha mocha-multi-reporters mocha-junit-reporter
 cypress run --reporter mocha-multi-reporters --reporter-options configFile=config.json
 ```
-
-**important** We have tested `cypress@0.19.4` and confirmed that it is working in CI
-environment when using `mocha@2.x.x` and NOT `mocha@3.x.x`. See [package.json](package.json)
-for development dependencies we are testing here.
 
 File [config.json](config.json) has
 
