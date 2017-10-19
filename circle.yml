@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # the Docker image with Cypress preinstalled
-      - image: cypress/internal:cy-0.19.4
+      - image: cypress/base:6
         environment:
           ## this enables colors in the output
           TERM: xterm
