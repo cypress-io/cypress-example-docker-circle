@@ -1,5 +1,7 @@
 # cypress-example-docker-circle [![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-docker-circle.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-docker-circle)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cypress-io/cypress-example-docker-circle.svg)](https://greenkeeper.io/)
+
 > Cypress + Docker + CircleCI = ❤️
 
 Running your Cypress E2E tests on Circle CI v2.0 is very simple.
