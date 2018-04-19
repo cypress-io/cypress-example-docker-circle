@@ -21,7 +21,7 @@
   "homepage": "https://github.com/cypress-io/cypress-example-docker-circle#readme",
   "devDependencies": {
     "cypress": "^1.0.2",
-    "mocha": "^4.0.1",
+    "mocha": "^5.1.1",
     "mocha-junit-reporter": "^1.13.0",
     "mocha-multi-reporters": "^1.1.4"
   }
