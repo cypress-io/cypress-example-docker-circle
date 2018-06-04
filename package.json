@@ -1,6 +1,6 @@
 {
   "name": "cypress-example-docker-circle",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Cypress + Docker + CircleCI = ❤️",
   "main": "index.js",
   "private": true,
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-docker-circle#readme",
   "devDependencies": {
-    "cypress": "^1.0.2",
+    "cypress": "^3.0.0",
     "mocha": "^4.0.1",
     "mocha-junit-reporter": "^1.13.0",
     "mocha-multi-reporters": "^1.1.4"
