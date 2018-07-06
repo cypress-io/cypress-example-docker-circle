@@ -5,7 +5,7 @@
 > Cypress + Docker + CircleCI = ❤️
 
 Running your Cypress E2E tests on Circle CI v2.0 is very simple.
-See [circle.yml](circle.yml) for the current build commands.
+See [circle.yml](.circleci/circle.yml) for the current build commands.
 You can use our base image
 [cypress/base](https://hub.docker.com/r/cypress/base/) with all
 dependencies pre-installed.
