@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # the Docker image with Cypress dependencies
-      - image: cypress/base:6
+      - image: cypress/base:8
         environment:
           ## this enables colors in the output
           TERM: xterm
@@ -14,13 +14,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-npm-deps-{{ checksum "package.json" }}
-            - v1-npm-deps
-      - run: npm install
+            - v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v2-deps-{{ .Branch }}-
+            - v2-deps-
+      - run: npm ci
       - save_cache:
-          key: v1-npm-deps-{{ checksum "package.json" }}
+          key: v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - node_modules
+            - ~/.npm
+            - ~/.cache
       - run:
           name: Running E2E tests with JUnit reporter
           command: npm run test-junit
